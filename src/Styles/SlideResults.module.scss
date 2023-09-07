@@ -1,0 +1,14 @@
+@import "variables.module";
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    height: 124px;
+    border-right: 1px solid $base-black;
+    align-items: center;
+    margin: 17px 0;
+}
+
+.p {
+    @include slider-text($font-family-base, 400)
+}

@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/./fonts/Inter-Regular.ttf') format('ttf'),
+    url('/./fonts/Inter-Regular.woff') format('woff'),
+    url('/./fonts/Inter-Regular.woff2') format('woff2'),
+    url('/./fonts/Inter-Regular.eot') format('eot');
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('/./fonts/Inter-Medium.ttf') format('ttf'),
+    url('/./fonts/Inter-Medium.woff') format('woff'),
+    url('/./fonts/Inter-Medium.woff2') format('woff2'),
+    url('/./fonts/Inter-Medium.eot') format('eot');
+}
+
+@font-face {
+    font-family: Ferry;
+    src: url('/./fonts/Ferry-Black.woff') format('woff'),
+    url('/./fonts/Ferry-Black.eot') format('eot'),
+    url('/./fonts/Ferry-Black.ttf') format('ttf');
+}
+
+$base-color: #029491;
+$base-black: #000;
+$base-white: #FFF;
+
+$additional-blue: #5970FF;
+$additional-light-blue: #7CE3E1;
+$additional-orange: #FFB64F;
+
+$form-gray: #C7C7C7;
+$form-dark-gray: #949494;
+
+$font-family-base: Inter-Regular, sans-serif;
+$font-family-medium: Inter-Medium, sans-serif;
+$font-family-bold: Ferry, sans-serif;
+
+@mixin textP($letter-spacing) {
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 20px;
+    letter-spacing: $letter-spacing;
+    margin-top: 20px;
+}
+
+@mixin card-rate() {
+    background: $base-white;
+    position: relative;
+    width: 415px;
+    height: 540px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+
+}
+
+@mixin card-header($background, $color) {
+    background: $background;
+    color: $color;
+    width: 415px;
+    height: 132px;
+    border-radius: 7px 7px 0 0;
+    position: relative;
+}
+
+@mixin rate-h2($padding-top) {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-medium;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: $padding-top 0 0 30px;
+}
+
+@mixin card-text {
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    margin: 10px 0 0 30px;
+}
+
+@mixin svg($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin oldRate($margin-left) {
+    margin-left: $margin-left;
+    font-family: $font-family-base;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+@mixin inRate($margin-top) {
+    font-family: $font-family-medium;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin: $margin-top 0 0 30px;
+}
+
+@mixin markers {
+    margin: 11px 0 0 30px;
+    padding: 0;
+
+    li {
+        list-style-image: url(../Svg/Marker.module.svg);
+        @include card-text;
+        margin: 7px 0 0 24px;
+        padding-left: 5px;
+    }
+}
+
+@mixin btn-detail {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 0);
+    width: 355px;
+    height: 59px;
+    border-radius: 5px;
+    background: $additional-blue;
+    color: $base-white;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin btn-sign-in-up($width) {
+    width: $width;
+    height: 35px;
+    background: $base-white;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid $form-gray;
+    color: $form-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    cursor: pointer;
+    padding: 0;
+}
+
+@mixin auth-text {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+
+@mixin search-text($margin-top:0) {
+    width: max-content;
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    margin-top: $margin-top;
+    position: relative;
+}
+
+@mixin search-form($width, $padding) {
+    width: $width;
+    height: 43px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $form-gray;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    padding: 0 $padding 0 $padding;
+}
+
+@mixin slider-text($font-family, $font-weight) {
+    color: $base-black;
+    font-family: $font-family;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $font-weight;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin: 9.75px 0;
+}
+
+@mixin resultsH1 {
+    color: $base-black;
+    font-family: $font-family-bold;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+}

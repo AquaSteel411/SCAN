@@ -1,0 +1,42 @@
+@import "variables.module";
+
+.slider {
+    width: 1560px;
+    height: 158px;
+    margin: 27px 0 0 183px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid $base-color;
+    box-sizing: border-box;
+    background: $base-white;
+    position: relative;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 133px;
+    height: 158px;
+    border: 2px solid $base-color;
+    box-sizing: border-box;
+    background-color: $base-color;
+    color: $base-white;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    left: -131px;
+    top: -2px;
+    z-index: 1;
+    padding: 17px 0;
+}
+
+.p {
+    @include slider-text($font-family-bold, 500)
+}
+
+.pDescription {
+    @include slider-text($font-family-base, 500);
+    margin-top: 9.75px;
+    color: $base-white;
+}
+

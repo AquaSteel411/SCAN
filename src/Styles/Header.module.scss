@@ -1,0 +1,102 @@
+@import "variables.module";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    height: 93px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: $base-black;
+    font-family: $font-family-base;
+    letter-spacing: 0.14px;
+
+    & > * {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        &:visited {
+            color: $base-black;
+        }
+    }
+}
+
+.signUp {
+    opacity: 0.4;
+}
+
+.nav {
+    height: 17px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.auth {
+    height: 26px;
+}
+
+.signIn {
+    font-family: $font-family-medium;
+    border-radius: 5px;
+    background: $base-color;
+    padding: 4px 10px 5px 12px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        font-size: 14px;
+        margin: 0 30px;
+    }
+
+    .nav {
+        width: 190px;
+    }
+
+    .auth {
+        width: 230px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1224px) {
+    .header {
+        font-size: 14px;
+        margin: 0 40px;
+    }
+
+    .nav {
+        width: 230px;
+    }
+
+    .auth {
+        width: 236px;
+    }
+}
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1224px) {
+    .header {
+        font-size: 17px;
+        margin: 0 60px;
+    }
+
+    .nav {
+        width: 316px;
+    }
+
+    .auth {
+        width: 276px;
+    }
+}
+
+
+
+

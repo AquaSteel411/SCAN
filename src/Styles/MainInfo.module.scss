@@ -1,0 +1,40 @@
+@import "variables.module";
+
+.section {
+    margin-top: 69px;
+}
+
+.h1 {
+    width: 743px;
+    color: #000;
+    font-family: $font-family-bold;
+    font-size: 60px;
+    letter-spacing: 0.6px;
+    margin: 61px 0 0;
+}
+
+.p {
+    @include textP(0.2px)
+}
+
+.btn {
+    width: 335px;
+    height: 59px;
+    color: $base-white;
+    background: $additional-blue;
+    font-family: $font-family-medium;
+    font-size: 22px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.22px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 84px;
+}
+
+.svg {
+    position: absolute;
+    right: 60px;
+    top: 144px;
+    z-index: -1;
+}

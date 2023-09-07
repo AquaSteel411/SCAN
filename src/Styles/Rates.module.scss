@@ -1,0 +1,18 @@
+@import "variables.module";
+
+.section {
+    margin-top: 108px;
+}
+
+.h1 {
+    color: $base-black;
+    font-family: $font-family-bold;
+    font-size: 45px;
+    letter-spacing: 0.45px;
+}
+
+.rates {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}

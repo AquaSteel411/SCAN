@@ -1,0 +1,9 @@
+@import "variables.module";
+
+.section {
+    margin-top: 107px;
+}
+
+.h1 {
+    @include resultsH1
+}

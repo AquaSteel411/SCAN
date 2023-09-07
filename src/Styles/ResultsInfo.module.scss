@@ -1,0 +1,23 @@
+@import "variables.module";
+
+.h1 {
+    color: $base-black;
+    font-family: $font-family-bold;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1.6px;
+}
+
+.span {
+    letter-spacing: 2px;
+}
+
+.p {
+    @include textP(0.4px)
+}
+
+.svg {
+    position: absolute;
+    top: -44px;
+    right: 44px;
+}

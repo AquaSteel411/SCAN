@@ -1,0 +1,23 @@
+@import "variables.module";
+
+.card {
+    width: 440px;
+    height: 225px;
+    border-radius: 10px;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+    margin: 20px auto;
+}
+
+.svg {
+    margin: 22px 0 0 19px;
+}
+
+.text {
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    margin: 12px 0 0 20px;
+}

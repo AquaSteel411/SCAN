@@ -1,0 +1,19 @@
+@import "variables.module";
+
+.main {
+    min-height: calc(100vh - 417px);
+}
+
+.h1 {
+    width: 817px;
+    color: $base-black;
+    font-family: $font-family-bold;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    margin: 69px 0 0 60px;
+}
+
+.svg {
+    margin: 14px 0 0 172px;
+}

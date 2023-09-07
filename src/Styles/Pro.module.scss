@@ -1,0 +1,41 @@
+@import "variables.module";
+
+.card {
+    @include card-rate
+}
+
+.header {
+    @include card-header($additional-light-blue, $base-black)
+}
+
+.h2Header {
+    @include rate-h2(30px)
+}
+
+.cardText {
+    @include card-text
+}
+
+.svg {
+    @include svg(4px, 283px)
+}
+
+.h2Rate {
+    @include rate-h2(33px)
+}
+
+.oldRate {
+    @include oldRate(19px)
+}
+
+.inRate {
+    @include inRate(59px)
+}
+
+.markers {
+    @include markers
+}
+
+.btnDetail {
+    @include btn-detail
+}

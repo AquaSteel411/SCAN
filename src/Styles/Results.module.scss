@@ -1,0 +1,19 @@
+@import "variables.module";
+
+.results {
+    margin-top: 127px;
+    position: relative;
+}
+
+.h1 {
+    @include resultsH1
+}
+
+.p {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+}
+

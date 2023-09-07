@@ -1,0 +1,159 @@
+@import "variables.module";
+
+.formSearch {
+    width: 872px;
+    height: 543px;
+    border-radius: 10px;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+    margin: 47px 0 200px;
+    padding: 29px 0 0 44px;
+    position: relative;
+
+    & > * {
+        display: block;
+    }
+}
+
+.tin {
+    @include search-text
+}
+
+.ton {
+    @include search-text(30px)
+}
+
+.range {
+    @include search-text(39px)
+}
+
+.footnote {
+    color: #000;
+    font-family: $font-family-base;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    position: absolute;
+    top: -5px;
+    right: -15px;
+}
+
+.form {
+    @include search-form(242px, 22px)
+}
+
+.formDate {
+    width: 176px;
+    height: 43px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.customSelect {
+    padding-right: 8px;
+    appearance: none;
+    -webkit-appearance: none; /* Safari и Chrome */
+    -moz-appearance: none; /* Mozilla */
+    -ms-appearance: none; /* IE */
+    background: url(../Svg/Select.module.svg) no-repeat calc(100% - 8px) center;
+    cursor: pointer;
+}
+
+.calendar {
+    @include search-form(176px, 0);
+    text-align: center;
+}
+
+.dateEnd {
+    position: absolute;
+    top: 401px;
+    left: 240px;
+}
+
+.checkBox {
+    height: 250px;
+    width: max-content;
+    position: absolute;
+    top: 29px;
+    left: 427px;
+}
+
+.customRadio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.customRadio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-bottom: 18px;
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    cursor: pointer;
+}
+
+.customRadio+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $base-black;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.customRadio:not(:checked)+label {
+    opacity: 0.4;
+}
+
+.customRadio:checked+label::before {
+    border-color: $base-black;
+    background-color: $base-white;
+    background-image: url(../Svg/CheckBox.module.svg);
+}
+
+.customRadio+label:hover {
+    border-color: $base-black;
+    opacity: 1;
+}
+
+.btn {
+    width: 305px;
+    height: 59px;
+    color: $base-white;
+    border: none;
+    border-radius: 5px;
+    background: $additional-blue;
+    position: absolute;
+    bottom: 59px;
+    right: 39px;
+    font-family: $font-family-medium;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.66px;
+    cursor: pointer;
+}
+
+.required {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    position: absolute;
+    right: 85px;
+    bottom: 32px;
+    margin: 0;
+}
+

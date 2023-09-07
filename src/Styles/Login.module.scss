@@ -1,0 +1,99 @@
+@import "variables.module";
+
+.login {
+    width: 429px;
+    height: 523px;
+    border-radius: 10px;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 162px;
+    right: 191px;
+
+    & > * {
+        margin-left: 25px;
+    }
+
+}
+
+.signIn {
+    @include btn-sign-in-up(151px);
+    margin: 17px 0 0 25px;
+}
+
+.signUp {
+    @include btn-sign-in-up(213px);
+    margin: 17px 0 0 15px;
+}
+
+.active {
+    color: $base-color;
+    border-bottom: 2px solid $base-color;
+}
+
+.form {
+    margin-top: 40px;
+}
+
+.text {
+    @include auth-text
+}
+
+.username {
+    width: 379px;
+    height: 43px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $form-gray;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+    padding: 0 0 0 10px;
+    margin: 15px 0 18px;
+}
+
+.enter {
+    width: 379px;
+    height: 59px;
+    border: none;
+    border-radius: 5px;
+    background: $additional-blue;
+    color: $base-white;
+    margin: 10px 0 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.recover {
+    color: $additional-blue;
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+    text-decoration-line: underline;
+    margin: 0 137.5px;
+    padding: 0;
+}
+
+.enterVia {
+    @include auth-text;
+    margin: 30px 25px 15px;
+}
+
+.services {
+    width: 308px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 25px;
+
+    a {
+        height: 31px;
+    }
+}
+
+.padlock {
+    position: absolute;
+    top: -55px;
+    left: -51px;
+    margin: 0;
+}
