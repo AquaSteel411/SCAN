@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .slide {
     display: flex;
@@ -11,4 +12,48 @@
 
 .p {
     @include slider-text($font-family-base, 400)
+}
+
+@media only screen and (max-width: 450px) {
+    .slide {
+        flex-direction: row;
+        align-items: end;
+        border-right: none;
+        height: 118px;
+        margin: 0;
+    }
+
+    .p {
+        margin: 0 23px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .slide {
+        flex-direction: row;
+        align-items: end;
+        border-right: none;
+        height: 118px;
+        margin: 0;
+    }
+
+    .p {
+        margin: 0 23px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }

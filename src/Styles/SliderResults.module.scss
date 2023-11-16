@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .slider {
     width: 1560px;
@@ -39,4 +40,94 @@
     margin-top: 9.75px;
     color: $base-white;
 }
+
+@media only screen and (max-width: 450px) {
+    .slider {
+        width: 298px;
+        height: 140px;
+        border-radius: 10px;
+        background: $base-white;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+        border: none;
+        margin: auto;
+    }
+
+    .description {
+        width: 75px;
+        height: 298px;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 122px 91px 60px;
+        transform: rotate(270deg);
+        border-radius: 0 10px 10px 0;
+        left: 110px;
+        top: -112px;
+        padding: 0;
+    }
+
+    .pDescription {
+        transform: rotate(90deg);
+        margin-top: 22px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .slider {
+        width: 298px;
+        height: 140px;
+        border-radius: 10px;
+        background: $base-white;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+        border: none;
+        margin: auto;
+    }
+
+    .description {
+        width: 75px;
+        height: 298px;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 122px 91px 60px;
+        transform: rotate(270deg);
+        border-radius: 0 10px 10px 0;
+        left: 110px;
+        top: -112px;
+        padding: 0;
+    }
+
+    .pDescription {
+        transform: rotate(90deg);
+        margin-top: 22px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+    .slider {
+        width: 80%;
+        margin: 27px 0 0 112px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .slider {
+        width: 80%;
+        margin: 27px 0 0 153px;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .slider {
+        width: 80%;
+        margin: 27px 0 0 188px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+    .slider {
+        width: 80%;
+        margin: 27px 0 0 202px;
+    }
+}
+
+
 

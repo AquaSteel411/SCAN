@@ -7,6 +7,7 @@ import dbSVG from '../Svg/WhyUsDB.module.svg'
 import DefenseSVG from '../Svg/WhyUsDefense.module.svg'
 import { NextArrow, PrevArrow } from "./Arrows";
 import Slide from "./Slide";
+import {useEffect, useState} from "react";
 
 
 function Slider() {
@@ -22,8 +23,19 @@ function Slider() {
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1224,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 840,
+                settings: { slidesToShow: 1 }
+            },
+        ],
     };
+
     return (
         <section>
             <SliderSlick {...settings}>

@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 body {
     margin: 0;
@@ -36,8 +37,6 @@ body {
 .nav {
     height: 17px;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
 .auth {
@@ -51,38 +50,712 @@ body {
     padding: 4px 10px 5px 12px;
 }
 
-@media screen and (max-width: 1000px) {
-    .header {
-        font-size: 14px;
-        margin: 0 30px;
+.spinner {
+    margin: auto;
+    animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
     }
 
-    .nav {
-        width: 190px;
-    }
-
-    .auth {
-        width: 230px;
+    to {
+        transform: rotate(360deg);
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1224px) {
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media screen and (max-width: 450px) {
     .header {
+        font-size: 16px;
+        margin: 0 14px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        width: 70px;
+        height: 90px;
+        z-index: 1;
+    }
+
+    .navGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        background-color: $base-white;
+        top: 160px;
+        right: 10px;
+        animation: ani 1.5s forwards;
+        z-index: 2;
+    }
+
+    .auth {
+        width: 190px;
+    }
+
+    .signUp {
+        font-size: 10px;
+    }
+
+    .svgThreeLine {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sectionUsername {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 170px;
+        height: 170px;
+        box-sizing: border-box;
+        position: relative;
+        animation: ani 1.5s forwards;
+        background-color: $base-white;
+        border: 2px solid $base-color;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .sectionUsernameFlex {
+        display: flex;
+        position: absolute;
+        top: 93px;
+        right: -10px;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
         font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        width: 132px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 38px;
+    }
+
+    .pUsed {
+        @include useLimit(8px, 4px 0 3px 10px);
+    }
+
+    .pLimit {
+        @include useLimit(8px, 2px 0 3px 10px);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) {
+    .header {
+        font-size: 16px;
         margin: 0 40px;
     }
 
     .nav {
-        width: 230px;
+        display: none;
+        position: absolute;
+        width: 70px;
+        height: 90px;
+        z-index: 1;
+    }
+
+    .navGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        background-color: $base-white;
+        top: 160px;
+        right: 10px;
+        animation: ani 1.5s forwards;
+    }
+
+    .auth {
+        width: 252px;
+    }
+
+    .afterAuth {
+        //width: 330px;
+    }
+
+    .svgThreeLine {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sectionUsername {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 170px;
+        height: 170px;
+        box-sizing: border-box;
+        position: relative;
+        animation: ani 1.5s forwards;
+        background-color: $base-white;
+        border: 2px solid $base-color;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .sectionUsernameFlex {
+        display: flex;
+        position: absolute;
+        top: 93px;
+        right: -10px;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        width: 132px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 38px;
+    }
+
+    .pUsed {
+        @include useLimit(8px, 4px 0 3px 10px);
+    }
+
+    .pLimit {
+        @include useLimit(8px, 2px 0 3px 10px);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .header {
+        font-size: 16px;
+        margin: 0 40px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        width: 70px;
+        height: 90px;
+    }
+
+    .navGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 150px;
+        right: 0;
+        animation: ani 1.5s forwards;
     }
 
     .auth {
         width: 236px;
     }
+
+    .afterAuth {
+        width: 240px;
+    }
+
+    .svgThreeLine {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sectionUsername {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 150px;
+        height: 40px;
+        box-sizing: border-box;
+        position: relative;
+        animation: ani 1.5s forwards;
+    }
+
+    .sectionUsernameFlex {
+        display: flex;
+        position: absolute;
+        top: 93px;
+        right: 0;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        width: 132px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 48px;
+    }
+
+    .pUsed {
+        @include useLimit(8px, 4px 0 3px 10px);
+    }
+
+    .pLimit {
+        @include useLimit(8px, 2px 0 3px 10px);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+    }
 }
 
-/* Настольные компьютеры и ноутбуки ----------- */
-@media only screen  and (min-width: 1224px) {
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .header {
+        font-size: 12px;
+        margin: 0 40px;
+    }
+
+    .nav {
+        height: 17px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-90%, 0);
+        width: 170px;
+    }
+
+    .auth {
+        width: 236px;
+    }
+
+    .afterAuth {
+        width: 310px;
+    }
+
+    .svgThreeLine {
+        display: none;
+    }
+
+    .sectionUsername {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 150px;
+        height: 40px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        //align-items: flex-end;
+        width: 132px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 28px;
+    }
+
+    .pUsed {
+        @include useLimit(8px, 4px 0 3px 10px);
+    }
+
+    .pLimit {
+        @include useLimit(8px, 2px 0 3px 10px);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+        //position: absolute;
+        //top: 31px;
+        //left: 158px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 0 0 10px;
+        //position: absolute;
+        //top: 12px;
+        //left: 158px;
+    }
+}
+
+/* Небольшие размеры экрана ----------- */
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .header {
+        font-size: 17px;
+        margin: 0 60px;
+    }
+
+    .nav {
+        width: 250px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .auth {
+        width: 276px;
+    }
+
+    .afterAuth {
+        width: 403px;
+    }
+
+    .svgThreeLine {
+        display: none;
+    }
+
+    .sectionUsername {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 150px;
+        height: 40px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 195px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 38px;
+    }
+
+    .pUsed {
+        @include useLimit(10px, 14px 44px 7px 0);
+    }
+
+    .pLimit {
+        @include useLimit(10px, 0 44px 0 0);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 31px;
+        left: 158px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 12px;
+        left: 158px;
+    }
+}
+
+/* Широкоформатные мониторы ----------- */
+@media only screen  and (min-width: 1500px) {
     .header {
         font-size: 17px;
         margin: 0 60px;
@@ -90,10 +763,120 @@ body {
 
     .nav {
         width: 316px;
+
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     .auth {
         width: 276px;
+    }
+
+    .afterAuth {
+        width: 453px;
+    }
+
+    .svgThreeLine {
+        display: none;
+    }
+
+    .sectionUsername {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 150px;
+        height: 40px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+        width: 100px;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.7;
+        margin: 0 46px 0 0;
+    }
+
+    .btnLogout {
+        width: 45px;
+        height: 15px;
+        box-sizing: border-box;
+        border: none;
+        margin: 4px 46px 0 0;
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.4;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .btnLogout:hover {
+        opacity: 1;
+    }
+
+    .container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .photo {
+        width: 140px;
+        height: 210px;
+        margin: -41px 0 0 -73px;
+    }
+
+    .infoUser {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 195px;
+        height: 63px;
+        border-radius: 5px;
+        background: #F0F0F0;
+        position: relative;
+        margin-right: 108px;
+    }
+
+    .pUsed {
+        @include useLimit(10px, 14px 44px 7px 0);
+    }
+
+    .pLimit {
+        @include useLimit(10px, 0 44px 0 0);
+    }
+
+    .userLimit {
+        color: #8AC540;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 31px;
+        left: 158px;
+    }
+
+    .usedCompany {
+        color: $base-black;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 12px;
+        left: 158px;
     }
 }
 

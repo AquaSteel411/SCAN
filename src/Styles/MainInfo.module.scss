@@ -1,40 +1,275 @@
 @import "variables.module";
+@import "mixins.module";
 
-.section {
-    margin-top: 69px;
-}
-
-.h1 {
-    width: 743px;
-    color: #000;
-    font-family: $font-family-bold;
-    font-size: 60px;
-    letter-spacing: 0.6px;
-    margin: 61px 0 0;
-}
-
-.p {
-    @include textP(0.2px)
+.smallSvg {
+    display: none;
 }
 
 .btn {
-    width: 335px;
-    height: 59px;
-    color: $base-white;
-    background: $additional-blue;
-    font-family: $font-family-medium;
-    font-size: 22px;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.22px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 84px;
+    cursor: pointer;
 }
 
-.svg {
-    position: absolute;
-    right: 60px;
-    top: 144px;
-    z-index: -1;
+.btn:hover {
+    opacity: 0.8;
+}
+
+@media only screen  and (max-width: 450px) {
+    .section {
+        margin-top: 39px;
+    }
+
+    .h1 {
+        width: 100%;
+        color: $base-black;
+        font-family: $font-family-bold;
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: 0.28px;
+        margin: 0;
+    }
+
+    .p {
+        @include textP(0.18px, 18px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 34px;
+    }
+
+    .svg {
+        display: none;
+    }
+
+    .smallSvg {
+        display: block;
+        margin: 30px auto 0;
+        top: 400px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .section {
+        margin-top: 39px;
+    }
+
+    .h1 {
+        width: 100%;
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 34px;
+        letter-spacing: 0.6px;
+        margin: 0;
+    }
+
+    .p {
+        @include textP(0.2px, 18px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 34px;
+    }
+
+    .svg {
+        display: none;
+    }
+
+    .smallSvg {
+        display: block;
+        margin: 30px auto 0;
+        top: 400px;
+    }
+}
+
+
+@media only screen  and (min-width: 600px) and (max-width: 1000px) {
+    .section {
+        margin-top: 69px;
+    }
+
+    .h1 {
+        width: 100%;
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 34px;
+        letter-spacing: 0.6px;
+        margin: 61px 0 0;
+    }
+
+    .p {
+        @include textP(0.2px, 18px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 84px;
+    }
+
+    .svg {
+        display: none;
+    }
+
+    .smallSvg {
+        display: block;
+        margin: 0 auto;
+        top: 400px;
+    }
+}
+
+
+/* Небольшие размеры экрана ----------- */
+@media only screen  and (min-width: 1000px) and (max-width: 1224px) {
+    .section {
+        margin-top: 69px;
+    }
+
+    .h1 {
+        width: 743px;
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 46px;
+        letter-spacing: 0.6px;
+        margin: 61px 0 0;
+    }
+
+    .p {
+        @include textP(0.2px, 18px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 84px;
+    }
+
+    .svg {
+        position: absolute;
+        transform: scale(0.6);
+        right: -51px;
+        top: 70px;
+        z-index: -1;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .section {
+        margin-top: 69px;
+    }
+
+    .h1 {
+        width: 743px;
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 54px;
+        letter-spacing: 0.6px;
+        margin: 61px 0 0;
+    }
+
+    .p {
+        @include textP(0.2px, 18px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 84px;
+    }
+
+    .svg {
+        position: absolute;
+        right: 60px;
+        top: 144px;
+        z-index: -1;
+    }
+}
+
+
+@media only screen  and (min-width: 1500px) {
+    .section {
+        margin-top: 69px;
+    }
+
+    .h1 {
+        width: 743px;
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 54px;
+        letter-spacing: 0.6px;
+        margin: 61px 0 0;
+    }
+
+    .p {
+        @include textP(0.2px, 20px)
+    }
+
+    .btn {
+        width: 335px;
+        height: 59px;
+        color: $base-white;
+        background: $additional-blue;
+        font-family: $font-family-medium;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 84px;
+    }
+
+    .svg {
+        position: absolute;
+        right: 60px;
+        top: 144px;
+        z-index: -1;
+    }
 }

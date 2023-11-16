@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .main {
     min-height: calc(100vh - 417px);
@@ -16,4 +17,61 @@
 
 .svg {
     margin: 14px 0 0 172px;
+}
+
+@media only screen and (max-width: 450px) {
+    .h1 {
+        width: 344px;
+        font-size: 22px;
+        letter-spacing: 0.44px;
+        margin: 31px 0 0 14px;
+    }
+
+    .svgMobile {
+        display: block;
+        margin: 30px auto 0;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .h1 {
+        width: 344px;
+        font-size: 22px;
+        letter-spacing: 0.44px;
+        margin: 31px 0 0 30px;
+    }
+
+    .svgMobile {
+        display: block;
+        margin: 30px auto 0;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 1224px) {
+    .h1 {
+        width: 411px;
+        font-size: 22px;
+        letter-spacing: 0.44px;
+        margin: 31px 0 0 30px;
+    }
+
+    .svgMobile {
+        display: block;
+        margin: 30px auto 0;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .h1 {
+        width: 717px;
+        font-size: 34px;
+    }
+
+    .svg {
+        margin: 60px 0 0 172px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }

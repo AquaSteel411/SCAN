@@ -8,7 +8,11 @@ function WhyUs() {
     return (
         <section className={styles.section}>
             <h1 className={styles.h1}>
-                Почему именно мы
+                Почему {(window.screen.width < 450)?
+                <br/>
+                :
+                <></>
+            } именно мы
             </h1>
             <Slider />
         </section>

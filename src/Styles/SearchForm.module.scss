@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .formSearch {
     width: 872px;
@@ -42,6 +43,43 @@
     @include search-form(242px, 22px)
 }
 
+.formError {
+    color: $error;
+    border: 1px solid $error !important;
+}
+
+.formError::placeholder {
+    color: $error;
+}
+
+.error {
+    position: absolute;
+    width: 242px;
+    text-align: center;
+    margin: 3px 0 0;
+    color: $error;
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.errorDate {
+    position: absolute;
+    width: 372px;
+    text-align: center;
+    margin: 3px 0 0;
+    color: $error;
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.errorDate::placeholder {
+    color: $error;
+}
+
 .formDate {
     width: 176px;
     height: 43px;
@@ -73,7 +111,7 @@
 }
 
 .checkBox {
-    height: 250px;
+    height: 270px;
     width: max-content;
     position: absolute;
     top: 29px;
@@ -127,20 +165,11 @@
 }
 
 .btn {
-    width: 305px;
-    height: 59px;
-    color: $base-white;
-    border: none;
-    border-radius: 5px;
-    background: $additional-blue;
+    @include baseBtn;
     position: absolute;
     bottom: 59px;
     right: 39px;
-    font-family: $font-family-medium;
-    font-size: 22px;
-    font-weight: 500;
     letter-spacing: 0.66px;
-    cursor: pointer;
 }
 
 .required {
@@ -155,5 +184,202 @@
     right: 85px;
     bottom: 32px;
     margin: 0;
+}
+
+@media only screen and (max-width: 450px) {
+    .formSearch {
+        width: 375px;
+        height: 1005px;
+        padding: 32px 0 0 14px;
+        box-sizing: border-box;
+        margin: 21px auto 0;
+    }
+
+    .form {
+        @include search-form(335px, 22px);
+    }
+
+    .calendar {
+        @include search-form(335px, 0);
+    }
+
+    .dateEnd {
+        position: absolute;
+        top: 464px;
+        left: 14px;
+    }
+
+    .btn {
+        @include baseBtn;
+        width: 335px;
+        position: absolute;
+        letter-spacing: 0.66px;
+        bottom: 40px;
+        left: 14px;
+    }
+
+    .checkBox {
+        height: 270px;
+        width: 335px;
+        position: absolute;
+        top: 555px;
+        left: 14px;
+    }
+
+    .required {
+        bottom: 18px;
+        left: 14px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .formSearch {
+        display: block;
+        width: 450px;
+        height: 1005px;
+        padding: 32px 0 0 20px;
+        box-sizing: border-box;
+        margin: 21px auto 0;
+    }
+
+    .form {
+        @include search-form(335px, 22px);
+    }
+
+    .calendar {
+        @include search-form(335px, 0);
+    }
+
+    .dateEnd {
+        position: absolute;
+        top: 464px;
+        left: 20px;
+    }
+
+    .btn {
+        @include baseBtn;
+        width: 410px;
+        position: absolute;
+        letter-spacing: 0.66px;
+        bottom: 40px;
+        left: 20px;
+    }
+
+    .checkBox {
+        height: 270px;
+        width: 335px;
+        position: absolute;
+        top: 555px;
+        left: 20px;
+    }
+
+    .required {
+        bottom: 18px;
+        left: 20px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+    .formSearch {
+        display: block;
+        width: 450px;
+        height: 1005px;
+        padding: 32px 0 0 20px;
+        box-sizing: border-box;
+        margin: 30px auto 0;
+    }
+
+    .form {
+        @include search-form(335px, 22px);
+    }
+
+    .calendar {
+        @include search-form(335px, 0);
+    }
+
+    .dateEnd {
+        position: absolute;
+        top: 464px;
+        left: 20px;
+    }
+
+    .btn {
+        @include baseBtn;
+        width: 410px;
+        position: absolute;
+        letter-spacing: 0.66px;
+        bottom: 40px;
+        left: 20px;
+    }
+
+    .checkBox {
+        height: 270px;
+        width: 335px;
+        position: absolute;
+        top: 555px;
+        left: 20px;
+    }
+
+    .required {
+        bottom: 18px;
+        left: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .formSearch {
+        display: block;
+        width: 490px;
+        height: 970px;
+        padding: 32px 0 0 40px;
+        box-sizing: border-box;
+        margin: 40px auto 0;
+    }
+
+    .form {
+        @include search-form(390px, 22px);
+    }
+
+    .calendar {
+        @include search-form(390px, 0);
+    }
+
+    .dateEnd {
+        position: absolute;
+        top: 464px;
+        left: 40px;
+    }
+
+    .btn {
+        @include baseBtn;
+        width: 410px;
+        position: absolute;
+        letter-spacing: 0.66px;
+        bottom: 40px;
+        left: 40px;
+    }
+
+    .checkBox {
+        height: 270px;
+        width: 390px;
+        position: absolute;
+        top: 555px;
+        left: 40px;
+    }
+
+    .required {
+        bottom: 18px;
+        left: 40px;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .formSearch {
+        margin: 47px 0 30px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }
 

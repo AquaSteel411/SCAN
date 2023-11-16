@@ -1,41 +1,309 @@
 @import "variables.module";
+@import "mixins.module";
 
-.card {
-    @include card-rate
+.btnDetail:hover {
+    opacity: 0.8;
 }
 
-.header {
-    @include card-header($base-black, $base-white)
+@media only screen and (max-width: 450px) {
+    .card {
+        @include card-rate($card-width-mobile, $card-height-medium);
+        margin: 10px auto;
+    }
+
+    .header {
+        @include card-header($base-black, $base-white, $card-width-mobile, $cardHeader-height-medium);
+    }
+
+    .h2Header {
+        @include rate-h2(30px);
+        font-size: 24px;
+    }
+
+    .cardText {
+        @include card-text($card-font-medium);
+    }
+
+    .li {
+        @include card-li($card-font-medium)
+    }
+
+    .svg {
+        @include svg(-5px, 250px);
+    }
+
+    .smallSvg {
+        transform: scale(0.7);
+    }
+
+    .h2Rate {
+        @include rate-h2(33px);
+    }
+
+    .oldRate {
+        @include oldRate(19px);
+    }
+
+    .inRate {
+        @include inRate(49px);
+    }
+
+    .markers {
+        @include markers;
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-medium);
+    }
 }
 
-.h2Header {
-    @include rate-h2(30px)
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .card {
+        @include card-rate($card-width-medium, $card-height-medium);
+        margin: 20px;
+    }
+
+    .header {
+        @include card-header($base-black, $base-white, $card-width-medium, $cardHeader-height-medium);
+    }
+
+    .h2Header {
+        @include rate-h2(30px);
+        font-size: 24px;
+    }
+
+    .cardText {
+        @include card-text($card-font-medium);
+    }
+
+    .li {
+        @include card-li($card-font-medium)
+    }
+
+    .svg {
+        @include svg(-5px, 250px);
+    }
+
+    .smallSvg {
+        transform: scale(0.7);
+    }
+
+    .h2Rate {
+        @include rate-h2(33px);
+    }
+
+    .oldRate {
+        @include oldRate(19px);
+    }
+
+    .inRate {
+        @include inRate(49px);
+    }
+
+    .markers {
+        @include markers;
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-medium);
+    }
 }
 
-.cardText {
-    @include card-text
+@media only screen  and (min-width: 600px) and (max-width: 1000px) {
+    .card {
+        @include card-rate($card-width-big, $card-height-big);
+        margin: 20px;
+    }
+
+    .header {
+        @include card-header($base-black, $base-white, $card-width-big, $cardHeader-height-big)
+    }
+
+    .h2Header {
+        @include rate-h2(30px);
+    }
+
+    .cardText {
+        @include card-text($card-font-big);
+    }
+
+    .li {
+        @include card-li($card-font-big)
+    }
+
+    .svg {
+        @include svg(23px, 314px)
+    }
+
+    .h2Rate {
+        @include rate-h2(33px)
+    }
+
+    .oldRate {
+        @include oldRate(19px)
+    }
+
+    .inRate {
+        @include inRate(91px)
+    }
+
+    .markers {
+        @include markers
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-big)
+    }
 }
 
-.svg {
-    @include svg(23px, 314px)
+@media only screen  and (min-width: 1000px) and (max-width: 1224px) {
+    .card {
+        @include card-rate($card-width-medium, $card-height-medium);
+        transform: scale(0.8);
+    }
+
+    .header {
+        @include card-header($base-black, $base-white, $card-width-medium, $cardHeader-height-medium);
+    }
+
+    .h2Header {
+        @include rate-h2(30px);
+        font-size: 24px;
+    }
+
+    .cardText {
+        @include card-text($card-font-medium);
+    }
+
+    .li {
+        @include card-li($card-font-medium)
+    }
+
+    .svg {
+        @include svg(-5px, 250px);
+    }
+
+    .smallSvg {
+        transform: scale(0.7);
+    }
+
+    .h2Rate {
+        @include rate-h2(33px);
+    }
+
+    .oldRate {
+        @include oldRate(19px);
+    }
+
+    .inRate {
+        @include inRate(49px);
+    }
+
+    .markers {
+        @include markers;
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-medium);
+    }
 }
 
-.h2Rate {
-    @include rate-h2(33px)
+/* Небольшие размеры экрана ----------- */
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .card {
+        @include card-rate($card-width-medium, $card-height-medium);
+    }
+
+    .header {
+        @include card-header($base-black, $base-white, $card-width-medium, $cardHeader-height-medium);
+    }
+
+    .h2Header {
+        @include rate-h2(30px);
+        font-size: 24px;
+    }
+
+    .cardText {
+        @include card-text($card-font-medium);
+    }
+
+    .li {
+        @include card-li($card-font-medium)
+    }
+
+    .svg {
+        @include svg(-5px, 250px);
+    }
+
+    .smallSvg {
+        transform: scale(0.7);
+    }
+
+    .h2Rate {
+        @include rate-h2(33px);
+    }
+
+    .oldRate {
+        @include oldRate(19px);
+    }
+
+    .inRate {
+        @include inRate(49px);
+    }
+
+    .markers {
+        @include markers;
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-medium);
+    }
 }
 
-.oldRate {
-    @include oldRate(19px)
-}
 
-.inRate {
-    @include inRate(91px)
-}
+/* Широкоформатные мониторы ----------- */
+@media only screen  and (min-width: 1500px) {
+    .card {
+        @include card-rate($card-width-big, $card-height-big);
+    }
 
-.markers {
-    @include markers
-}
+    .header {
+        @include card-header($base-black, $base-white, $card-width-big, $cardHeader-height-big)
+    }
 
-.btnDetail {
-    @include btn-detail
+    .h2Header {
+        @include rate-h2(30px);
+    }
+
+    .cardText {
+        @include card-text($card-font-big);
+    }
+
+    .li {
+        @include card-li($card-font-big)
+    }
+
+    .svg {
+        @include svg(23px, 314px)
+    }
+
+    .h2Rate {
+        @include rate-h2(33px)
+    }
+
+    .oldRate {
+        @include oldRate(19px)
+    }
+
+    .inRate {
+        @include inRate(91px)
+    }
+
+    .markers {
+        @include markers
+    }
+
+    .btnDetail {
+        @include btn-detail($cardBtn-width-big)
+    }
 }

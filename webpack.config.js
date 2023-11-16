@@ -33,6 +33,10 @@ module.exports = {
                 issuer: /\.[jt]sx?$/,
                 use: ["@svgr/webpack"],
             },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     plugins: [

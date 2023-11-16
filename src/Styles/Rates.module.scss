@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .section {
     margin-top: 108px;
@@ -15,4 +16,48 @@
     margin-top: 70px;
     display: flex;
     justify-content: space-around;
+
 }
+
+@media only screen and (max-width: 450px) {
+    .section {
+        margin-top: 55px;
+    }
+
+    .rates {
+        display: grid;
+        margin-top: 40px;
+    }
+
+    .h1 {
+        font-size: 28px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .section {
+        margin-top: 55px;
+    }
+
+    .rates {
+        display: grid;
+        margin-top: 40px;
+    }
+
+    .h1 {
+        font-size: 28px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 1000px) {
+    .rates {
+        display: grid;
+    }
+}
+
+@media only screen  and (min-width: 1000px) and (max-width: 1224px) {
+    .rates {
+        transform: scale(0.95);
+    }
+}
+

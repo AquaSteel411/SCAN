@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .footer {
     display: flex;
@@ -8,6 +9,7 @@
     height: 137px;
     background: $base-color;
     margin-top: 118px;
+    min-height: calc(100% - 230px);
 }
 
 .logo {
@@ -25,6 +27,30 @@
     letter-spacing: 0.14px;
 }
 
+.smallLogo {
+    margin-left: 18px;
+}
+
 .copyright {
     margin-top: 21px;
+}
+
+@media only screen and (max-width: 450px) {
+    .logo {
+        margin-left: 18px;
+    }
+
+    .contacts {
+        margin-right: 19px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .logo {
+        margin-left: 30px;
+    }
+
+    .contacts {
+        margin-right: 30px;
+    }
 }

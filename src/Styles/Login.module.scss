@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .login {
     width: 429px;
@@ -96,4 +97,159 @@
     top: -55px;
     left: -51px;
     margin: 0;
+}
+
+@media only screen and (max-width: 450px) {
+    .login {
+        width: 335px;
+        height: 504px;
+        position: static;
+        margin: 126px auto 0;
+
+        & > * {
+            margin-left: 15px;
+        }
+    }
+
+    .padlock {
+        position: absolute;
+        top: 273px;
+        left: 95px;
+        margin: 0;
+    }
+
+    .signIn {
+        @include btn-sign-in-up(103px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .signUp {
+        @include btn-sign-in-up(182px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .active {
+        color: $base-color;
+        border-bottom: 2px solid $base-color;
+    }
+
+    .username {
+        width: 305px;
+    }
+
+    .enter {
+        width: 305px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .login {
+        width: 335px;
+        height: 504px;
+        position: static;
+        margin: 126px auto 0;
+
+        & > * {
+            margin-left: 15px;
+        }
+    }
+
+    .padlock {
+        position: absolute;
+        top: 273px;
+        left: 95px;
+        margin: 0;
+    }
+
+    .signIn {
+        @include btn-sign-in-up(103px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .signUp {
+        @include btn-sign-in-up(182px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .active {
+        color: $base-color;
+        border-bottom: 2px solid $base-color;
+    }
+
+    .username {
+        width: 305px;
+    }
+
+    .enter {
+        width: 305px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 1224px) {
+    .login {
+        width: 335px;
+        height: 504px;
+        position: static;
+        margin: 126px auto 0;
+        & > * {
+            margin-left: 15px;
+        }
+    }
+
+    .padlock {
+        position: absolute;
+        top: 262px;
+        left: 40%;
+        transform: translate(-39%, 0);
+        margin: 0;
+    }
+
+    .signIn {
+        @include btn-sign-in-up(103px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .signUp {
+        @include btn-sign-in-up(182px);
+        margin: 17px 0 0 15px;
+        font-size: 14px;
+        letter-spacing: 0.28px;
+    }
+
+    .active {
+        color: $base-color;
+        border-bottom: 2px solid $base-color;
+    }
+
+    .username {
+        width: 305px;
+    }
+
+    .enter {
+        width: 305px;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .login {
+        right: 51px;
+    }
+
+    .padlock {
+
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }

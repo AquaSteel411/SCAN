@@ -10,11 +10,11 @@ function Rates() {
     return (
         <section className={styles.section}>
             <h1 className={styles.h1}>Наши тарифы</h1>
-            <div className={styles.rates}>
+            <section className={styles.rates}>
                 <Beginner />
                 <Pro />
                 <Business />
-            </div>
+            </section>
         </section>
     )
 }

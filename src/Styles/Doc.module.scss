@@ -1,0 +1,347 @@
+@import "variables.module";
+@import "mixins.module";
+
+.section {
+    width: 641px;
+    height: 694px;
+    padding: 19px 30px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.date {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+.source {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    text-decoration-line: underline;
+    margin-left: 14px;
+}
+
+a.source:hover {
+    color: $base-black;
+}
+
+.title {
+    width: 546px;
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.52px;
+    margin: 23px 0 17px;
+}
+
+.tecNews {
+    @include typeDoc($additional-orange)
+}
+
+.announcement {
+    @include typeDoc($base-color)
+}
+
+.digest {
+    @include typeDoc($additional-blue)
+}
+
+.containerImg {
+    width: 581px;
+    height: 158px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin: 17px 0 0;
+}
+
+.img {
+    position: absolute;
+    width: 581px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.text {
+    width: 581px;
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    opacity: 0.5;
+}
+
+.btn {
+    width: 223px;
+    height: 46px;
+    position: absolute;
+    bottom: 35px;
+    border: none;
+    border-radius: 5px;
+    background: $additional-light-blue;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.wordCount {
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    color: $form-dark-gray;
+
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+
+@media only screen and (max-width: 450px) {
+    .section {
+        width: 335px;
+        height: 694px;
+        padding: 19px 19px 25px;
+    }
+
+    .title {
+        width: 297px;
+        font-size: 19px;
+        letter-spacing: 0.19px;
+    }
+
+    .containerImg {
+        width: 297px;
+        height: 158px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin: 17px 0 0;
+    }
+
+    .img {
+        position: absolute;
+        width: 297px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .text {
+        width: 297px;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 40px;
+    }
+
+    .wordCount {
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .section {
+        width: 335px;
+        height: 694px;
+        padding: 19px 19px 25px;
+    }
+
+    .title {
+        width: 297px;
+        font-size: 19px;
+        letter-spacing: 0.19px;
+    }
+
+    .containerImg {
+        width: 297px;
+        height: 158px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin: 17px 0 0;
+    }
+
+    .img {
+        position: absolute;
+        width: 297px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .text {
+        width: 297px;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 40px;
+    }
+
+    .wordCount {
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+    .section {
+        width: 480px;
+        height: 594px;
+        padding: 19px 19px 25px;
+    }
+
+    .title {
+        width: 442px;
+        font-size: 19px;
+        letter-spacing: 0.19px;
+    }
+
+    .containerImg {
+        width: 442px;
+        height: 158px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin: 17px 0 0;
+    }
+
+    .img {
+        position: absolute;
+        width: 442px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .text {
+        width: 442px;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 40px;
+    }
+
+    .wordCount {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .section {
+        width: 335px;
+        height: 694px;
+        padding: 19px 19px 25px;
+    }
+
+    .title {
+        width: 297px;
+        font-size: 19px;
+        letter-spacing: 0.19px;
+    }
+
+    .containerImg {
+        width: 297px;
+        height: 158px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin: 17px 0 0;
+    }
+
+    .img {
+        position: absolute;
+        width: 297px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .text {
+        width: 297px;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 40px;
+    }
+
+    .wordCount {
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .section {
+        width: 520px;
+        height: 594px;
+        padding: 19px 19px 25px;
+    }
+
+    .title {
+        width: 482px;
+        font-size: 19px;
+        letter-spacing: 0.19px;
+    }
+
+    .containerImg {
+        width: 482px;
+        height: 158px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 10px;
+        margin: 17px 0 0;
+    }
+
+    .img {
+        position: absolute;
+        width: 482px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .text {
+        width: 482px;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+    }
+
+    .btn {
+        width: 195px;
+        height: 40px;
+    }
+
+    .wordCount {
+        font-size: 14px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
+}

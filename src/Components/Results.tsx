@@ -1,15 +1,23 @@
 import * as React from "react";
 import SliderResults from "./SliderResults";
 import styles from '../Styles/Results.module.scss';
+import SpinnerSVG from "../Svg/Spinner.module.svg";
 
 
-function Results() {
+function Results({resultSearch}) {
 
     return (
         <section className={styles.results}>
             <h1 className={styles.h1}>Общая сводка</h1>
-            <p className={styles.p}>Найдено 4 221 вариантов</p>
-            <SliderResults />
+            {!resultSearch.length?
+                <SpinnerSVG className={styles.spinner} />
+                :
+                <>
+                    <p className={styles.p}>Найдено {resultSearch.length} вариантов</p>
+                    <SliderResults resultSearch={resultSearch} />
+                </>
+            }
+
         </section>
     )
 }

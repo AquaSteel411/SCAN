@@ -1,0 +1,200 @@
+@import "variables.module";
+
+@mixin textP($letter-spacing, $font-size) {
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    margin-top: 20px;
+}
+
+@mixin card-rate($width, $height) {
+    background: $base-white;
+    position: relative;
+    width: $width;
+    height: $height;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+@mixin card-header($background, $color, $width, $height) {
+    background: $background;
+    color: $color;
+    width: $width;
+    height: $height;
+    border-radius: 7px 7px 0 0;
+    position: relative;
+}
+
+@mixin rate-h2($padding-top) {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-medium;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: $padding-top 0 0 30px;
+}
+
+@mixin card-text($font-size) {
+    font-family: $font-family-base;
+    font-size: $font-size;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    margin: 10px 0 0 30px;
+}
+
+@mixin svg($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin oldRate($margin-left) {
+    margin-left: $margin-left;
+    font-family: $font-family-base;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+@mixin inRate($margin-top) {
+    font-family: $font-family-medium;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin: $margin-top 0 0 30px;
+}
+
+@mixin markers {
+    margin: 11px 0 0 30px;
+    padding: 0;
+}
+
+@mixin card-li($font-size) {
+    list-style-image: url(../Svg/Marker.module.svg);
+    font-family: $font-family-base;
+    font-size: $font-size;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    margin: 7px 0 0 24px;
+    padding-left: 5px;
+}
+
+@mixin btn-detail($width) {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translate(-50%, 0);
+    width: $width;
+    height: 59px;
+    border-radius: 5px;
+    background: $additional-blue;
+    color: $base-white;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin btn-sign-in-up($width) {
+    width: $width;
+    height: 35px;
+    background: $base-white;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid $form-gray;
+    color: $form-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    cursor: pointer;
+    padding: 0;
+}
+
+@mixin auth-text {
+    color: $form-dark-gray;
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+
+@mixin search-text($margin-top:0) {
+    width: max-content;
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    margin-top: $margin-top;
+    position: relative;
+}
+
+@mixin search-form($width, $padding) {
+    width: $width;
+    height: 43px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $form-gray;
+    background: $base-white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    padding: 0 $padding 0 $padding;
+}
+
+@mixin slider-text($font-family, $font-weight) {
+    color: $base-black;
+    font-family: $font-family;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $font-weight;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    margin: 9.75px 0;
+}
+
+@mixin resultsH1($font-size) {
+    color: $base-black;
+    font-family: $font-family-bold;
+    font-size: $font-size;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    margin-bottom: 58px;
+}
+
+@mixin useLimit($font-size, $margin) {
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: $font-size;
+    font-weight: 400;
+    margin: $margin;
+    opacity: 0.7;
+}
+
+@mixin typeDoc($background-color) {
+    color: $base-black;
+    font-family: $font-family-base;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    background-color: $background-color;
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin-right: 6px;
+}
+
+@mixin baseBtn {
+    width: 305px;
+    height: 59px;
+    color: $base-white;
+    border: none;
+    border-radius: 5px;
+    background: $additional-blue;
+    font-family: $font-family-medium;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+}

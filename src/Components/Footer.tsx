@@ -1,5 +1,6 @@
 import * as React from "react";
 import LogoSVG from '../Svg/LogoFooter.module.svg'
+import SmallLogoSVG from '../Svg/FooterLogoSmall.module.svg';
 import styles from '../Styles/Footer.module.scss'
 
 
@@ -7,7 +8,11 @@ function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <LogoSVG className={styles.logo}/>
+            {(window.screen.width < 450)?
+                <SmallLogoSVG className={styles.smallLogo} />
+                :
+                <LogoSVG className={styles.logo}/>
+            }
             <section className={styles.contacts}>
                 <p>
                     г. Москва, Цветной б-р, 40<br/>

@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .results {
     margin-top: 127px;
@@ -6,7 +7,7 @@
 }
 
 .h1 {
-    @include resultsH1
+    @include resultsH1(30px)
 }
 
 .p {
@@ -15,5 +16,61 @@
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.36px;
+}
+
+.spinner {
+    display: block;
+    margin: auto;
+    animation: 2s linear infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .results {
+        margin-top: 57px;
+    }
+    .h1 {
+        @include resultsH1(28px);
+        letter-spacing: 0.28px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .results {
+        margin-top: 37px;
+    }
+    .h1 {
+        @include resultsH1(28px);
+        letter-spacing: 0.28px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .results {
+        margin-top: 27px;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .results {
+        margin-top: 57px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }
 

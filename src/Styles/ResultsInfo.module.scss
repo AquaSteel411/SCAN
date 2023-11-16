@@ -1,4 +1,5 @@
 @import "variables.module";
+@import "mixins.module";
 
 .h1 {
     color: $base-black;
@@ -13,11 +14,56 @@
 }
 
 .p {
-    @include textP(0.4px)
+    @include textP(0.4px, 20px)
 }
 
 .svg {
     position: absolute;
     top: -44px;
     right: 44px;
+}
+
+@media only screen and (max-width: 450px) {
+    .h1 {
+        font-size: 28px;
+        letter-spacing: 0.28px;
+    }
+
+    .smallSvg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .p {
+        font-size: 18px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 800px) {
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1224px) {
+    .svg {
+        display: block;
+        position: static;
+        margin: 0 auto;
+    }
+}
+
+@media only screen  and (min-width: 1224px) and (max-width: 1500px) {
+    .svg {
+        transform: scale(0.6);
+        position: absolute;
+        top: -44px;
+        right: -100px;
+    }
+}
+
+@media only screen  and (min-width: 1500px) {
+
 }

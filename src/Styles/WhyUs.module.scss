@@ -1,4 +1,6 @@
 @import "variables.module";
+@import "mixins.module";
+
 
 .section {
     margin-top: 199px;
@@ -11,3 +13,52 @@
     letter-spacing: 0.45px;
     margin-bottom: 70px;
 }
+
+@media only screen and (max-width: 450px) {
+    .section {
+        margin-top: 30px;
+    }
+
+    .h1 {
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 28px;
+        letter-spacing: 0.45px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen  and (min-width: 450px) and (max-width: 600px) {
+    .section {
+        margin-top: 50px;
+    }
+
+    .h1 {
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 28px;
+        letter-spacing: 0.45px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen  and (min-width: 600px) and (max-width: 1000px) {
+    .section {
+        margin-top: 50px;
+    }
+
+    .h1 {
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 35px;
+        letter-spacing: 0.45px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen  and (min-width: 1000px) and (max-width: 1224px) {
+    .section {
+        margin-top: 70px;
+    }
+}
+

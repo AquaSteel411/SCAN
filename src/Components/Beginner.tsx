@@ -1,23 +1,16 @@
 import * as React from "react";
-import { connect } from "react-redux";
 import styles from '../Styles/Beginner.module.scss'
 import BeginnerSVG from '../Svg/Beginner.module.svg'
 
 
-function Beginner(props) {
-    const add = () => {
-        console.log('action done')
-        props.addElement('gg')
-        // console.log(props.store)
-    }
-    console.log(props)
+export default function Beginner() {
 
     return (
-        <div className={styles.card}>
+        <section className={styles.card}>
             <header className={styles.header}>
                 <h2 className={styles.h2Header}>Beginner</h2>
                 <p className={styles.cardText}>Для небольшого исследования</p>
-                <BeginnerSVG className={styles.svg} />
+                <BeginnerSVG className={`${styles.svg} ${styles.smallSvg}`} />
             </header>
             <h2 className={styles.h2Rate}>
                 790 ₽
@@ -28,22 +21,11 @@ function Beginner(props) {
             <p className={styles.cardText}>или 279 ₽/мес. при рассрочке на 24 мес.</p>
             <p className={styles.inRate}> В тариф входит:</p>
             <ul className={styles.markers}>
-                <li>Все пункты тарифа Beginner</li>
-                <li>Экспорт истории</li>
-                <li>Рекомендации по приоритетам</li>
+                <li className={styles.li}>Все пункты тарифа Beginner</li>
+                <li className={styles.li}>Экспорт истории</li>
+                <li className={styles.li}>Рекомендации по приоритетам</li>
             </ul>
-            <button className={styles.btnDetail} onClick={add} >Подробнее</button>
-        </div>
+            <button className={styles.btnDetail}>Подробнее</button>
+        </section>
     )
 }
-
-export default connect(
-    state => ({
-        state
-    }),
-    dispatch => ({
-        addElement: () => {
-            dispatch({type: 'ADD_TODO', payload: '123'})
-        }
-    })
-)(Beginner) ;
